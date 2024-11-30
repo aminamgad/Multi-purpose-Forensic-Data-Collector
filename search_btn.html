@@ -1,0 +1,1332 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converted Tables with Search</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            font-family: 'Roboto', sans-serif;
+        }
+        .glass-container {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            z-index: 10;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: 0.3s ease;
+        }
+        tr{
+          color: rgb(10, 10, 10);
+        }
+        .highlight {
+            background-color: #ffe066 !important;
+        }
+    </style></head>
+<body class="p-10">
+  <div class="glass-container max-w-6xl mx-auto">
+    <h1 class="text-4xl text-center font-bold text-white mb-6">Converted Tables with Search</h1>
+    <!-- Search Box -->
+    <div class="mb-4">
+      <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Search substances..." 
+          class="w-full px-4 py-2 text-lg border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+          onkeyup="searchTables()"
+      >
+  </div>
+    <script>
+        function searchTables() {
+            const input = document.getElementById("searchInput");
+            const filter = input.value.toLowerCase();
+            const tables = document.querySelectorAll("table");
+            
+            tables.forEach((table) => {
+                let rows = table.getElementsByTagName("tr");
+                for (let i = 1; i < rows.length; i++) { // Skip the header row
+                    let cells = rows[i].getElementsByTagName("td");
+                    let found = false;
+                    for (let j = 0; j < cells.length; j++) {
+                        if (cells[j].textContent.toLowerCase().includes(filter)) {
+                            found = true;
+                            break;
+                        }
+                    }
+                    rows[i].style.display = found ? "" : "none";
+                }
+            });
+        }
+    </script>
+<h2>جدول رقم واحد قسم أ</h2>
+<div class="overflow-x-auto">
+<table border="1" class="min-w-full text-white text-sm">
+  <thead>
+    <tr class="bg-blue-700">
+      <th>Substance group</th>
+      <th>Examples of the drivatives</th>
+      <th>Active ingreadients  and discribtion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>(Cocaine)</td>
+      <td>All the compounds that has min  0.1 ٪% of the substance</td>
+      <td>Methyl ester of benzoylecgonine (an alkaloid found in coca leaves or prepared by synthesis from ecgonine)</td>
+    </tr>
+    <tr>
+      <td>(Heroin)</td>
+      <td>In its pure form, mixed, or diluted to any extent, regardless of its concentration or ratio.”</td>
+      <td>Diacetylmorphine (derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>6- MAM (6-monoacetyl Morphine)</td>
+      <td>JWH-018\nJWH-073\nJWH-200</td>
+      <td>6-monoacetyl Morphine</td>
+    </tr>
+    <tr>
+      <td>Naphthoylindole</td>
+      <td>CP-47,497-C8-\nhomologue\nCP-47,497</td>
+      <td>Naphthalene-1-yl(1-pentyl-1H-indol-3-yl)\nmethanone\nNaphthalen-1-yl-(1-butylindol-3-yl)\nmethanone\n1-(2-(4-Morpholinyl) ethyl)-3-(1-naphthoyl)\nindole</td>
+    </tr>
+    <tr>
+      <td>Cyclo Hexyl phenol</td>
+      <td>AB-Fubinaca\nAB-Chminaca\nEMB-Fubinaca\n5F-ADB\nAMB- Fubinaca\nADB-Fubinaca</td>
+      <td>5-(1,1-dimethyloctyl)-2-(3-\nhydroxycyclohexyl)-phenol\n5-(1,1-(dimethylheptyl)-2-(3-\nhydroxycyclohexyl)-phenol</td>
+    </tr>
+    <tr>
+      <td>Indazol Carboxamide</td>
+      <td>XLR-11\nXLR-11N-(4-\nfluoropentyl) isomer</td>
+      <td>N-[(2S)-1-amino-3-methyl-1-oxobutan-2-yl]-1-\n[(4-fluorophenyl)methyljindazole-3-\ncarboxamide\nN-[(2S)-1-amino-3-methyl-oxobutan-2-yl]-1-\n(cyclohexy|methyl)-1H-indazole-3-\ncarboxamide\nN-[[1-[(4-fluorophenyl) methyl]-1H-indazol-3-\nyl|carbonyl]-L-valine, ethyl ester\nMethyl (2S)-2-{[1-(fluoropentyl)-1H-indazole-\n3-carbonyl|amino)-3,3-dimethylbutanoate\nMethyl (2S)-2-{[1-|(4-fluorophenyl) methyl]\nindazole-3-carbonyl] amino}-3-\nmethylbutanoate\nN-[(2S)-1-amino-3,3-dimethyl-1-oxobutan-2-\nyl]-1-[(4-fluorophenyl)methyl]-1H indazole-3-\ncarboxamide</td>
+    </tr>
+    <tr>
+      <td>Tetramethyl Cyclopropyl Indole</td>
+      <td>5F-MDMB-PICA\nADBICA\n5-Flouro ADBICA\nIn\n5-Fluoro APP- PICA\n(PX1)\nAMB- PICA (MMB2201)</td>
+      <td>[1-(5-Fluoropentyl)-1H-indol-3-\nyl](2,2,3,3tetramethylcyclopropyl)methanone\n(1-(4-fluoropentyl)-1H-indol-3-yl) (2,2,3,3-\ntetramethylcyclopropyl) methanone</td>
+    </tr>
+    <tr>
+      <td>Indole Carboxamide</td>
+      <td>5F-MDMB-PICA\nADBICA\n5-Flouro ADBICA\nIn\n5-Fluoro APP- PICA\n(PX1)\nAMB- PICA (MMB2201)</td>
+      <td>Methyl(S)-2-(1-(5-fluoropentyl)-1H-indole-3-\ncarboxamido)-3,3-dimethylbutanoate\nN-(1-Amino-3,3-dimethyl-1-oxobutan-2-yl)-1-\npentyl-1H-indole-3-carboxamide\nN-[(2S)-1-Amino-3,3-dimethyl-1-oxobutan-2-yl]-1-(5-fluoropentyl) indole-3-carboxamide\n(S)-N-(1-amino-1-oxo-3-pheny|propan-2-yl)-1-(5-fluoropentyl)-1H-indole-3-carboxamide\n(S)-Methyl 2-(1-(5-fluoropentyl)-1H-indole-3-\ncarboxamido)-3-methylbutanoate</td>
+    </tr>
+    <tr>
+      <td>Substituted Cathinone</td>
+      <td>Methcathinone\nMethyl Ethcathinone\nEthcathinone\nC4-Chloroethcathinone\n</td>
+      <td>2-(methylamino)-1-phenylpropan-1-one\n2-(Ethylamino)-1-(4-methylphenyl)-1-\npropanone\n(RS)-2-ethylamino-1-phenyl-propan-1-one\n1-(4-chlorophenyl)-2-(ethylamino) propan-1-\none</td>
+    </tr>
+    <tr>
+      <td>Classical Cannabinoids Dibenzopyran</td>
+      <td>DMHP</td>
+      <td>3-(1,2-dimethylheptyl)-7,8,9,10-tetrahydro-\n6,6,9-trimethyl-6Hdibenzo[b,d|pyran-1-ol</td>
+    </tr>
+    <tr>
+      <td>Naphthylmethylindole</td>
+      <td>JWH-175\nJWH-184\n</td>
+      <td>3-(1-naphthalenylmethyl)-1-pentyl-1H-indole\n3-[(4-methyl-1-naphthalenyl) methyl]-1-\npentyl-1H-indole</td>
+    </tr>
+    <tr>
+      <td>Naphthoylpyrrole</td>
+      <td>JWH-368\nJWH-145</td>
+      <td>[5-(3-fluorophenyl)-1-pentyl-1H-pyrrol-3-yl]-\n1-naphthalenyl-methanone\n1-naphthalenyl(1-pentyl-5-phenyl-1H-pyrrol-\n3-yl)-methanone</td>
+    </tr>
+    <tr>
+      <td>Naphthylmethylindene</td>
+      <td>JWH-176</td>
+      <td>1-[(E)-(3-pentyl-1H-inden-1-ylidene) methyl]-\nnaphthalene</td>
+    </tr>
+    <tr>
+      <td>Phenylacetylindole</td>
+      <td>JWH-167\nJWH-203</td>
+      <td>1-(1-Pentyl-1H-indol-3-yl) -2-phenylethan-1-\none\n2-(2-Chlorophenyl)-1-(1-pentylindol-3-yl)\nethenone</td>
+    </tr>
+    <tr>
+      <td>Phenethylamine</td>
+      <td>Amphetamine\nDexamphetamine\nMethamphetamine\nSTP.DOM\nMESCALINE\nBenzphetamine\nBrolamphetamine\nTenamphetamine\nDMA\nMDMA\nMMDA\nN - ethyl MDA\nN - hydroxy MDA\nPMA\nLevamphetamine\nLevomethamphetamine\nTMA\nN-ethylamphetamine\nDOET\n(2-CB)\n(4 - MTA)</td>
+      <td>1-pheny|propan-2-amine\n(2S)-1-phenylpropan-2-amine\n(+)-(S)-N,a-dimethylphenethylamine\n2,5-dimethoxy-o,4-dimethylphenethylamine\n3,4,5-trimethoxyphenethylamine\nN-benzyl-N,a-dimethylphenethylamine\n(*)-4-bromo-2,5-dimethoxy-a-\nmethylphenethylamine\na-methyl-3,4-(methylenedioxy)phenethylamine\n(*) -2,5-dimethoxy-a-methylphenethylamine\n(*)-N,a-dimethyl-3,4-\n(methylenedioxy)phenethylamine\n5-methoxy-a-methyl-3,4-\n(methylenedioxy)phenethylamine\n(*)-N-ethyl-a-methyl-3,4-\n(methylenedioxy)phenethylamine\n(*)-N[a-methyl-3,4-\n(methylenedioxy)phenethyl|hydroxylamine\n1-(4-methoxyphenyl)propan-2-amine\n(-)-(R)-a-methylphenethylamine\n(-)-N,c-dimethylphenethylamine\n(#)-3,4,5-trimethoxy-a-\nmethylphenethylamine\nN-ethyl-a-methylphenethylamine\n(*)-4-ethyl-2,5-dimethoxy-a-\nmethylphenethylamine\n4-bromo-2,5-dimethoxyphenethylamine\na - Methyl -4- Methylthiophenethylamine</td>
+    </tr>
+    <tr>
+      <td>Quinolinyl ester</td>
+      <td>PB-22\n5F-PB-22</td>
+      <td>1-Pentyl-1H-indole-3-carboxylic acid 8-quinolinyl ester\n1-Pentyfluoro-1H-indole-3-carboxylic acid 8-quinolinyl ester</td>
+    </tr>
+    <tr>
+      <td>Admantoyl Indole</td>
+      <td>5F-APINACA\nAPICA</td>
+      <td>N-(adamantan-1-yl)-1-(5-fluoropentyl)-1H-\nindazole-3-carboxamide\nN-(1-Adamantyl)-1-pentylindole-3-\ncarboxamide</td>
+    </tr>
+    <tr>
+      <td>Pyrovalerone</td>
+      <td>MDPV\n\na-PVP</td>
+      <td>1-(1,3-Benzodioxol-5-yl)-2 -(pyrrolidin-1-yl)\npentan-1-one\n(RS)-1-Phenyl-2-(1-pyrrolidinyl)-1-pentanone</td>
+    </tr>
+    <tr>
+      <td>Nitazene</td>
+      <td>Isotonitazene\n\nEtonitazene\n\nClonitazene</td>
+      <td>N,N-diethyl-2-(2-(4-isopropoxybenzyl)-5-\nnitro-1H-benzo[djimidazol-1-yl)ethan-1-\namine\n1-diethylaminoethyl-2-p-ethoxybenzyl-5-\nnitrobenzimidazole\n2-(p-chlorobenzyl)-1-diethylaminoethyl-5-\nnitrobenzimidazole</td>
+    </tr>
+    <tr>
+      <td>Fentanyl</td>
+      <td>Fentanyl\n\nalpha - methylfentanyl\n\npara-fluorofentanyl\n\nbeta-Hydroxyfentanyl\n\nbeta - hydroxy-3-methylfentanyl\n\n3- Methylfentanyl\n\npara\nFluorobutyrylfentanyl\n\nOrthoFluorofentanyl\n\nMethoxyacetylfentanyl\nCyclopropylfentanyl\nCarfentanil\nOcfentanil\nFuranylfentanyl\nAcryloylfentanyl\n4-\nFluoroisobutyrfentanyl\nTetra\nHydrofuranylfentanyl\nCrotonylfentanyl\nValerylfentanyl</td>
+      <td>1-phenethyl-4-N-propionylanilinopiperidine\nN-[1-(@-methylphenethyl)-4-\npiperidyl|propionanilide\n4-fluoro-N-(1-phenethyl-4-\npiperidyl) propionanilide\nN-(1-(ß-hydroxyphenethyl)-4-\npiperidyl]propionanilide\nN-[1-(ß-hydroxyphenethyl)-3-methyl-4-\npiperidyl/propionanilide\nN-(3-methyl-1-phenethyl-4-\npiperidyl)propionanilide\nN-(2-Fluorophenyl)-N-[1-(2-\nphenylethyl)piperidin-4-yl] propanamide\n2-Methoxy-N-phenyl-N-[1-(2-\nphenylethyl)piperidin-4-yl]acetamide\nN-Phenyl-N-[1-(2-phenylethyl)piperidin-4-\nyl|cyclopropanecarboxamide\nMethyl 1-(2-phenylethyl)-4-\n[pheny (propanoyl) amino]piperidine-4-\ncarboxylate\nN-(2-fluorophenyl)-2-methoxy-N-[1-(2-\nphenylethyl)piperidin-4-yl]acetamide\nN-phenyl-N-[1-(2-phenylethyl)piperidin-4-\nyl]furan-2-carboxamide\nN-phenyl-N-[1-(2-phenylethyl)piperidin-4-\nyl]prop-2-enamide\nN-(4-fluorophenyl)-N-(1-phenetylpiperidin-4-\nyl) isobutyramide\nN-phenyl-N-[1-(2-phenylethyl)piperidin-4-\nyl]tetrahydrofuran-2-carboxamide\n(E)-N-(1-phenethylpiperidin-4-yl)-N-\nphenylbut-2-enamide\nN-(1-phenethylpiperidin-4-yl)-N-\nphenylpentanamide</td>
+    </tr>
+  </tbody>
+</table><div><hr>
+<h2>الجدول الاول قسم ٢</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Substance</th>
+      <th>Active ingredient and discription</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Etorphine</td>
+      <td>tetrahydro-7alpha -(1-hydroxy-1-methylbutyl)-6,14-endo-ethenooripavine (derivative of thebaine)</td>
+    </tr>
+    <tr>
+      <td>Ethylmethylthiambutene</td>
+      <td>3-ethylmethylamino-1,1-di-(2'-thienyl)-1-butene</td>
+    </tr>
+    <tr>
+      <td>Acetylmethadol</td>
+      <td>3-acetoxy-6-dimethylamino-4,4-diphenylheptane</td>
+    </tr>
+    <tr>
+      <td>Acetorphine</td>
+      <td>3-0-acetyltetrahydro-7x-(1-hydroxy-1-methylbutyl)-6,14-endo-ethenooripavine (Derivative of thebaine)</td>
+    </tr>
+    <tr>
+      <td>Ecgonine</td>
+      <td>its esters and derivatives which are convertible to ecgonine and cocaine</td>
+    </tr>
+    <tr>
+      <td>Oxycodone</td>
+      <td>14-hydroxydihydrocodienone(Derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Oxymorphone</td>
+      <td>14-hydroxydihydromorphinone (Derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Morphine-N-Oxide and other morphine derivatives and compounds with pentavalent nitrogen.</td>
+      <td>(Derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Opium, including raw opium, medicinal opium, and prepared opium under all its names, as well as all opium preparations listed or unlisted in pharmacopoeias, containing more than (0.2%) morphine. This also includes opium dilutions in an inactive liquid or solid substance, regardless of their concentration level.</td>
+      <td>the coagulated juice of the opium poppy (plant species Papaver somniferum L.)</td>
+    </tr>
+    <tr>
+      <td>Alphaprodine</td>
+      <td>alpha-1,3-dimethyl-4-phenyl-4-propionoxypiperidine</td>
+    </tr>
+    <tr>
+      <td>alphacetylmethadol</td>
+      <td>alpha -3-acetoxy-6-dimethylamino-4,4-diphenylheptane</td>
+    </tr>
+    <tr>
+      <td>alphameprodine</td>
+      <td>alpha-3-ethyl-1-methyl-4-phenyl-4-propionoxypiperidine</td>
+    </tr>
+    <tr>
+      <td>alphamethadol</td>
+      <td>a-6-dimethylamino-4,4-diphenyl-3-heptanol</td>
+    </tr>
+    <tr>
+      <td>Ally|prodine</td>
+      <td>3-allyl-1-methyl-4-phenyl-4-propionoxypiperidine</td>
+    </tr>
+    <tr>
+      <td>Amobarbital</td>
+      <td>5-ethyl-5-isopentylbarbituric acid</td>
+    </tr>
+    <tr>
+      <td>Anileridine</td>
+      <td>1-p-aminophenethyl-4-phenylpiperidine-4-carboxylic acid ethyl ester</td>
+    </tr>
+    <tr>
+      <td>Etoxeridine</td>
+      <td>1-[2-(2-hydroxyethoxy)-ethyll-4-phenylpiperidine-4-carboxylic acid ethyl ester</td>
+    </tr>
+    <tr>
+      <td>Hydrocodone</td>
+      <td>dihydrocodeinone (derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Hydroxypethidine</td>
+      <td>4-m-hydroxyphenyl-1-methy piperidine-4-carboxylic acid ethyl ester</td>
+    </tr>
+    <tr>
+      <td>Hydromorphone</td>
+      <td>dihydromorphinone (derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Hydromorphinol</td>
+      <td>14-hydroxydihydromorphine (derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Isomethadone</td>
+      <td>6-dimethylamino-5-methyl-4,4-diphenyl-3-hexanone</td>
+    </tr>
+    <tr>
+      <td>Pethidine</td>
+      <td>1-methyl-4-pheny|piperidine-4-carboxylic acid ethyl ester</td>
+    </tr>
+    <tr>
+      <td>Pethidine Intermediate - A</td>
+      <td>4-cyano-1-methyl-4-phenylpiperidine</td>
+    </tr>
+    <tr>
+      <td>Pethidine Intermediate - B</td>
+      <td>4-phenylpiperidine-4-carboxylic acid ethyl ester</td>
+    </tr>
+    <tr>
+      <td>Pethidine Intermediate - C</td>
+      <td>1-methyl-4-phenylpiperidine-4-carboxylic acid</td>
+    </tr>
+    <tr>
+      <td>Psilocybin</td>
+      <td>3-[2-(dimethylamino)ethyl|indol-4-yl  dihydrogen phosphate</td>
+    </tr>
+    <tr>
+      <td>Properidine</td>
+      <td>1-methyl-4-phenylpiperidine-4-carboxylic acid isopropyl ester</td>
+    </tr>
+    <tr>
+      <td>Proheptazine</td>
+      <td>1,3-dimethyl-4-phenyl-4-propionoxyazacycloheptane</td>
+    </tr>
+    <tr>
+      <td>Piritramide</td>
+      <td>1-(3-cyano-3,3-dipheny|propyl)-4-(1-piperidino)piperidine-4-carboxylic acid amide</td>
+    </tr>
+    <tr>
+      <td>Bezitramide</td>
+      <td>1-(3-cyano-3,3-diphenylpropyl)-4-(2-oxo-3-propionyl-1-benzimidazolinyl)piperidine</td>
+    </tr>
+    <tr>
+      <td>Benzethidine</td>
+      <td>1-(2-benzyloxyethyl)-4-phenylpiperidine-4-carboxylic acid ethyl ester</td>
+    </tr>
+    <tr>
+      <td>Benzoylmorphine</td>
+      <td>17-Methyl-4,5alpha-epoxymorphina-7-ene-3,6alpha-diol 3-benzoate</td>
+    </tr>
+    <tr>
+      <td>Benzylmorphine</td>
+      <td>3-0-benzylmorphine</td>
+    </tr>
+    <tr>
+      <td>beta-acetylmethadol</td>
+      <td>ß-3-acetoxy-6-dimethylamino-4,4-diphenylheptane</td>
+    </tr>
+    <tr>
+      <td>betaprodine</td>
+      <td>ß-1,3-dimethyl-4-phenyl-4-propionoxypiperidine</td>
+    </tr>
+    <tr>
+      <td>betameprodine</td>
+      <td>ß-3-ethyl-1-methyl-4-phenyl-4-propionoxypiperidine</td>
+    </tr>
+    <tr>
+      <td>betamethadol</td>
+      <td>ß-6-dimethylamino-4,4-diphenyl-3-heptanol</td>
+    </tr>
+    <tr>
+      <td>Piminodine</td>
+      <td>4-phenyl-1-(3-phenylaminopropyl)piperidine-4-carboxylic acid ethyl ester</td>
+    </tr>
+    <tr>
+      <td>Butalbital</td>
+      <td>5-allyl-5-isobutylbarbituric acid</td>
+    </tr>
+    <tr>
+      <td>Trimeperidine</td>
+      <td>1,2,5-trimethyl-4-phenyl-4-propionoxypiperidine</td>
+    </tr>
+    <tr>
+      <td>Diethylthiambutene</td>
+      <td>3-diethylamino-1,1-di-(2'-thienyl)-1-butene</td>
+    </tr>
+    <tr>
+      <td>Dioxaphetyl butyrate</td>
+      <td>ethyl-4-morpholino-2,2-diphenylbutyrate</td>
+    </tr>
+    <tr>
+      <td>Dipipanone</td>
+      <td>4,4-diphenyl-6-piperidine-3-heptanone</td>
+    </tr>
+    <tr>
+      <td>Ddhyiromorphine</td>
+      <td>(Derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Diphenoxylate and its preparations that contain more than 2.5 mg of diphenoxylate per single dose, calculated as the base, and include an amount of atropine sulfate equivalent to at least 1% of the diphenoxylate content.</td>
+      <td>1-(3-cyano-3,3-diphenylpropyl)-4-phenylpiperidine-4-carboxylic acid ethyl ester</td>
+    </tr>
+    <tr>
+      <td>Difenoxin and its preparations that contain more than 0.5 mg of difenoxin per single dose, calculated as the base, and include an amount of atropine sulfate equivalent to at least 5% of the difenoxin content.</td>
+      <td>1-(3-cyano-3,3-dipheny|propyl)-4-phenylisonipecotic acid</td>
+    </tr>
+    <tr>
+      <td>Dimethylthiambutene</td>
+      <td>3-dimethylamino-1,1-di-(2'-thienyl)-1-butene</td>
+    </tr>
+    <tr>
+      <td>Dimepheptanol</td>
+      <td>6-dimethylamino-4,4-diphenyl-3-heptanol</td>
+    </tr>
+    <tr>
+      <td>Dimenoxadol</td>
+      <td>2-dimethylaminoethyl-1-ethoxy-1,1-diphenylacetate</td>
+    </tr>
+    <tr>
+      <td>Thebacon</td>
+      <td>Acetyldihydrocodeinone</td>
+    </tr>
+    <tr>
+      <td>Thebaine</td>
+      <td>(acetylated enol form of hydrocodone) (an alkaloid of opium; also found in Papaver bracteatum)</td>
+    </tr>
+    <tr>
+      <td>Glutethimide</td>
+      <td>2-ethyl-2-phenylglutarimide</td>
+    </tr>
+    <tr>
+      <td>Cannabis (Hashish)\n\nIncluding all its types and names, whether produced, prepared, or extracted from the fruits, leaves, stems, roots, or resin of the cannabis plant, whether male or female. This includes:\n\n\t•\tGalenical preparations of cannabis (extract or tincture).\n\t•\tDried fruits, flowers, or leaves of the cannabis plant and their derivatives.\n\t•\tAny active elements of cannabis in any products, compounds, or preparations, regardless of their concentration.\n\t•\tExtracts of the cannabis plant or any part of it, such as hashish oil.\n\t•\tPowders made from all or parts of the cannabis plant, such as hashish powder or any other mixtures.\n\t•\tResins derived from the cannabis plant, whether in pure form or mixed, regardless of type.</td>
+      <td>No data</td>
+    </tr>
+    <tr>
+      <td>Dextromoramide</td>
+      <td>(+)-4-[2-methyl-4-oxo-3,3-diphenyl-4-(1-pyrrolidinyl) butyl]morpholine (dextro-rotatory isomer of moramide)</td>
+    </tr>
+    <tr>
+      <td>Drotebanol</td>
+      <td>3,4-dimethoxy-17-methylmorphinan-63,14-diol</td>
+    </tr>
+    <tr>
+      <td>Diampromide</td>
+      <td>N-[2-(methylphenethylamino)-propyl|propionanilide</td>
+    </tr>
+    <tr>
+      <td>Desomorphine</td>
+      <td>dihydrodesoxymorphine (derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Racemoramide</td>
+      <td>(+/-)-4-[2-methyl-4-oxo-3,3-diphenyl-4-(1-pyrrolidinyl)butyl]morpholine</td>
+    </tr>
+    <tr>
+      <td>Racamorphan  and (Dextrophan) is not considered as narcotic substance</td>
+      <td>(+/-)-3-hydroxy-N-methylmorphinan</td>
+    </tr>
+    <tr>
+      <td>Racemethorphan and (Dextromethorphan) is not considered as narcotic substance</td>
+      <td>(+/-)-3-methoxy-N-methylmorphinan</td>
+    </tr>
+    <tr>
+      <td>Secobarbital</td>
+      <td>5-allyl-5-(1-methylbutyl)barbituric acid</td>
+    </tr>
+    <tr>
+      <td>Phenadoxone</td>
+      <td>6-morpholino-4,4-diphenyl-3-heptanone</td>
+    </tr>
+    <tr>
+      <td>Phenazocine</td>
+      <td>2'-hydroxy-5,9-dimethyl-2-phenethyl-6,7-benzomorphan</td>
+    </tr>
+    <tr>
+      <td>Phenampromide</td>
+      <td>N-(1-methyl-2-piperidinoethyl)propionanilide</td>
+    </tr>
+    <tr>
+      <td>Phenoperidine</td>
+      <td>1-(3-hydroxy-3-phenylpropyl)-4-phenylpiperidine-4-carboxylic acid ethyl ester</td>
+    </tr>
+    <tr>
+      <td>Phenomorphan</td>
+      <td>3-hydroxy-N-phenethylmorphinan</td>
+    </tr>
+    <tr>
+      <td>Furethidine</td>
+      <td>1-(2-tetrahydrofurfuryloxyethyl)-4-pheny|piperidine-4-carboxylic acid ethyl ester</td>
+    </tr>
+    <tr>
+      <td>Codoxime</td>
+      <td>dihydrocodeinone-6-carboxymethyloxime</td>
+    </tr>
+    <tr>
+      <td>Ketobemidone</td>
+      <td>4-m-hydroxyphenyl-1-methyl-4-propionylpiperidine</td>
+    </tr>
+    <tr>
+      <td>(+)-Lysergide</td>
+      <td>9,10 -didehydro-N,N-diethyl-6-methylergoline-8B-boxamide</td>
+    </tr>
+    <tr>
+      <td>Levorphanol and (dextrophan ) is not considered as narcotic substance</td>
+      <td>(-)-3-hydroxy-N-methylmorphinan</td>
+    </tr>
+    <tr>
+      <td>Levophenacylmorphan</td>
+      <td>(-)-3-hydroxy-N-phenacylmorphinan</td>
+    </tr>
+    <tr>
+      <td>Levomoramide</td>
+      <td>(-)-4-[2-methyl-4-oxo-3,3-diphenyl-4-(1-pyrrolidinyl)butyl]morpholine</td>
+    </tr>
+    <tr>
+      <td>Levomethorphan  and (Dextromethorphan) is not considered as narcotic substance</td>
+      <td>(-)-3-methoxy-N-methylmorphinan</td>
+    </tr>
+    <tr>
+      <td>Methyldihydromorphine</td>
+      <td>6-methyldihydromorphine (derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Methyldesorphine</td>
+      <td>6-methyl-6-deoxymorphine (derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Concentrate of Poppy Straw</td>
+      <td>Intermediate opiate raw materials</td>
+    </tr>
+    <tr>
+      <td>Moramide intermediate</td>
+      <td>2-methyl-3-morpholino-1,1-diphenylpropane carboxylic acid</td>
+    </tr>
+    <tr>
+      <td>Morpheridine</td>
+      <td>1-(2-morpholinoethyl)-4-phenylpiperidine-4-carboxylic acid ethyl ester</td>
+    </tr>
+    <tr>
+      <td>Morphine, the principal alkaloid of opium and the opium poppy, and all its preparations, whether listed or unlisted in pharmacopoeias, that contain more than 0.2% morphine.\n\nThis includes morphine residues in an inactive liquid or solid substance, regardless of their concentration level.</td>
+      <td>the principal alkaloid of opium and of opium poppy</td>
+    </tr>
+    <tr>
+      <td>Metazocine</td>
+      <td>2-hydroxy-2,5,9-trimethyl-6,7-b enzomorphan</td>
+    </tr>
+    <tr>
+      <td>Metopon</td>
+      <td>5-methyldihydromorphinone (Derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Methadone</td>
+      <td>6-dimethylamino-4,4-diphenyl-3-heptanone</td>
+    </tr>
+    <tr>
+      <td>Methadone Intermediate</td>
+      <td>4-cyano-2-dimethylamino-4,4-diphenylbutane</td>
+    </tr>
+    <tr>
+      <td>Methaqualone</td>
+      <td>2-methyl-3-(2-methylphenyl) quinazolin-4-one</td>
+    </tr>
+    <tr>
+      <td>Methylphenidate</td>
+      <td>methyl 2-phenyl-2-piperidin-2-ylacetate</td>
+    </tr>
+    <tr>
+      <td>Myrophine</td>
+      <td>Myristylbenzylmorphine (Derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Noracymethadol</td>
+      <td>(+/-)-a-3-acetoxy-6-methylamino-4,4-diphenylheptane</td>
+    </tr>
+    <tr>
+      <td>Norpipanone</td>
+      <td>4,4-diphenyl-6-piperidino-3-hexanone</td>
+    </tr>
+    <tr>
+      <td>Norlevorphanol</td>
+      <td>(-)-3-hydroxymorphinan</td>
+    </tr>
+    <tr>
+      <td>Normorphine</td>
+      <td>desmethylmorphine (Derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Normethadone</td>
+      <td>6-dimethylamino-4,4-diphenyl-3-hexanone</td>
+    </tr>
+    <tr>
+      <td>Nicomorphine</td>
+      <td>3,6-dinicotinylmorphine (Derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Tetrahydrocannabinol</td>
+      <td>tetrahydrocannabinol</td>
+    </tr>
+    <tr>
+      <td>Psilocin, psilotsin</td>
+      <td>3-[2-(dimethylamino)ethyljindol-4-ol</td>
+    </tr>
+    <tr>
+      <td>Parahexyl</td>
+      <td>3-hexyl-7,8,9,10-tetrahydro-6,6,9-trimethyl-6H-dibenzo[b,d]pyran-1-ol</td>
+    </tr>
+    <tr>
+      <td>DET</td>
+      <td>3-[2-(diethylamino)ethyljindole</td>
+    </tr>
+    <tr>
+      <td>DMT</td>
+      <td>3-[2-(dimethylamino)ethyl]indole</td>
+    </tr>
+    <tr>
+      <td>Mecloqualone</td>
+      <td>3-(o-chlorophenyl)-2-methyl-4(3H)-quinazolinone</td>
+    </tr>
+    <tr>
+      <td>Tenocyclidine</td>
+      <td>1-[1-(2-thienyl)cyclohexyl]piperidine</td>
+    </tr>
+    <tr>
+      <td>Rolicyclidine</td>
+      <td>1-(1-phenylcyclohexyl)pyrrolidine</td>
+    </tr>
+    <tr>
+      <td>Eticyclidine</td>
+      <td>N-ethyl-1-phenylcyclohexylamine</td>
+    </tr>
+    <tr>
+      <td>Alfentanil</td>
+      <td>N-[1-[2-(4-ethyl-4,5-dihydro-5-oxo-1H-tetrazol-1-yl)ethyl]-4-(methoxymethyl)-4-piperidinyl]-N-phenylpropanamide</td>
+    </tr>
+    <tr>
+      <td>Pentazocine</td>
+      <td>(2R*,6R*,11R*)-1,2,3,4,5,6-hexahydro-6,11-dimethyl-3-(3-methyl-2-butenyl)-2,6-methano-3-benzazocin-8-</td>
+    </tr>
+    <tr>
+      <td>Sufentanil</td>
+      <td>N-[4-(methoxymethyl)-1-[2-(2-thienyl) ethyl]-4-piperidyl|propionanilide</td>
+    </tr>
+    <tr>
+      <td>Thiofentanyl</td>
+      <td>N-[1- [2-(2-thienyl)ethyl]-4-piperidyl|propionanilide</td>
+    </tr>
+    <tr>
+      <td>Fenetylline</td>
+      <td>7-|2-|(a-methylphenethyl)amino|ethyl|theophylline</td>
+    </tr>
+    <tr>
+      <td>Cathinone</td>
+      <td>(-) (S)-2-aminopropiophenone</td>
+    </tr>
+    <tr>
+      <td>Etryptamine</td>
+      <td>3-(2-aminobutyl)indole</td>
+    </tr>
+    <tr>
+      <td>Aminorex</td>
+      <td>2-amino-5-phenyl-2-oxazoline</td>
+    </tr>
+    <tr>
+      <td>4- Methylaminorex</td>
+      <td>(+/-)-cis-2-amino-4-methyl-5-phenyl-2-oxazoline</td>
+    </tr>
+    <tr>
+      <td>Flunitrazepam</td>
+      <td>5-(o-fluorophenyl)-1,3-dihydro-1-methyl-7-nitro-2H1,4-benzodiazepin-2-one</td>
+    </tr>
+    <tr>
+      <td>Dihydroetorphine</td>
+      <td>7,8-dihydro-7a-[1-(R)-hydroxy-1-methylbutyl]-6,14-endo-ethanotetrahydrooripavine (derivative of etorphine)</td>
+    </tr>
+    <tr>
+      <td>Remifentanil</td>
+      <td>1-(2-methoxycarbonylethyl)-4-(phenylpropionylamino)-piperidine-4-carboxylic acid methyl ester</td>
+    </tr>
+    <tr>
+      <td>Buprenorphine</td>
+      <td>21-cyclopropyl-7-a-[(S)-1-hydroxy-1,2,2-trimethylpropyl]-6,14-endo-ethano-6,7,8,14-tetrahydrooripavine</td>
+    </tr>
+    <tr>
+      <td>Tramadol</td>
+      <td>2-[(Dimethylamino)methyl]-1-(3-methoxyphenyl) cyclohexanol</td>
+    </tr>
+    <tr>
+      <td>SDB-005</td>
+      <td>Naphthalen-1-yl 1-pentyl-1H-indazole-3-carboxylate</td>
+    </tr>
+    <tr>
+      <td>5- Fluoro Py - pica</td>
+      <td>(1-(5-fluoropentyl) - 1H - indol -3-yl)( pyrrolidin- 1-yl) methanone</td>
+    </tr>
+    <tr>
+      <td>U-47700 (Pink Heroin)</td>
+      <td>3,4-dichloro-N-(2-dimethylamino-cyclohexyl)-N-methyl-benzamide</td>
+    </tr>
+    <tr>
+      <td>Ethylphenidate</td>
+      <td>ethyl 2-phenyl-2-(piperidin-2-yl)acetate [1]</td>
+    </tr>
+    <tr>
+      <td>Methiopropamine</td>
+      <td>1- (thiophen-2-yl)-2-methylaminopropane</td>
+    </tr>
+    <tr>
+      <td>Tilidine</td>
+      <td>(+/-)-ethyl-trans-2-(dimethylamino)-1-phenyl-3-cyclohexene-1-carboxylate</td>
+    </tr>
+    <tr>
+      <td>3- Methoxyphencyclidine</td>
+      <td>1-(1-(3-Methoxyphenyl)cyclohexyl)piperidine</td>
+    </tr>
+    <tr>
+      <td>Diphenidine</td>
+      <td>1-(1,2-Diphenylethyl)piperidine</td>
+    </tr>
+    <tr>
+      <td>Cumyl-pegaclone</td>
+      <td>5-Pentyl-2-(2-phenylpropan-2-yl)-2,5-dihydro-1Hpyrido[4,3-b]indol-1-one</td>
+    </tr>
+    <tr>
+      <td>ALD -52</td>
+      <td>1- acetyl -lysergic acid diethylamide</td>
+    </tr>
+    <tr>
+      <td>AL-LAD</td>
+      <td>6-allyl - 6- nor - lysergic acid diethylamide</td>
+    </tr>
+    <tr>
+      <td>1P - LSD</td>
+      <td>1- propionyl • lysergic acid diehtylamide</td>
+    </tr>
+    <tr>
+      <td>1 CP- LSD</td>
+      <td>N1- (cyclopropylmethanoyl) - lysergic acid diethylamide</td>
+    </tr>
+    <tr>
+      <td>1P - ETH - LAD</td>
+      <td>1-propionyl-6 - ethyl - 6 - nor - lysergic acid diethylamide</td>
+    </tr>
+    <tr>
+      <td>ETH - LAD</td>
+      <td>6-ethyl -6 - nor - lysergic acid diethylamide</td>
+    </tr>
+    <tr>
+      <td>1V -LSD</td>
+      <td>1-valeryl - D- lysergic acid diethylamide</td>
+    </tr>
+  </tbody>
+</table><hr>
+<h2>الجدول التاني </h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Cocaine preparations containing no more than 0.1% cocaine, calculated as a base.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Diphenoxylate preparations in which each single dose contains 2.5 milligrams or less of diphenoxylate, calculated as a base, and includes an amount of atropine sulfate equivalent to at least 1% of the diphenoxylate.</td>
+    </tr>
+    <tr>
+      <td>Difenoxin preparations in which each single dose contains 0.5 milligrams or less of difenoxin, calculated as a base, and includes an amount of atropine sulfate equivalent to at least 5% of the difenoxin.</td>
+    </tr>
+    <tr>
+      <td>Opium or morphine preparations where the morphine content does not exceed 0.2%, calculated as anhydrous morphine base, and are compounded with one or more components in a manner that prevents the extraction of the narcotic substance using available means.</td>
+    </tr>
+    <tr>
+      <td>Preparations based on cannabis extract or tincture, intended exclusively for external use.</td>
+    </tr>
+  </tbody>
+</table><hr>
+<h2>جدول الثالث</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Substance</th>
+      <th>Active ingredient and discription</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ethyl Morphine</td>
+      <td>3-ethylmorphine (Derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Acetyl dihydrocodeine</td>
+      <td>(Derivative of codeine)</td>
+    </tr>
+    <tr>
+      <td>Norcodeine</td>
+      <td>N-demethylcodeine (Derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Nicodicodeine</td>
+      <td>6-nicotinoyldihydrocodeine (Derivative of morphine)</td>
+    </tr>
+  </tbody>
+</table><hr>
+<h2>جدول الثالث القسم ال٢</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Substance</th>
+      <th>Active ingredient and description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Propiram</td>
+      <td>N-(1-methyl-2-piperidinoethyl)-N-2-pyridylpropionamide</td>
+    </tr>
+  </tbody>
+</table><hr>
+<h2>الجدول ال٣قسم ٣</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Substance</th>
+      <th>Active ingredient and discription</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ethchlorvynol</td>
+      <td>1-chloro-3-ethyl-1-penten-4-yn-3-ol</td>
+    </tr>
+    <tr>
+      <td>Ethinamate</td>
+      <td>1-ethynylcyclohexanolcarbamate</td>
+    </tr>
+    <tr>
+      <td>Barbital</td>
+      <td>5,5-diethylbarbituric acid</td>
+    </tr>
+    <tr>
+      <td>Pentobarbital</td>
+      <td>5-ethyl-5-1-methylbutyl)barbituric acid</td>
+    </tr>
+    <tr>
+      <td>Pipradrol</td>
+      <td>1,1-diphenyl-1-(2-piperidyl)methanol</td>
+    </tr>
+    <tr>
+      <td>lephetamine</td>
+      <td>(-)-N,N-dimethyl-1,2-diphenylethylamine</td>
+    </tr>
+    <tr>
+      <td>Cyclobarbital</td>
+      <td>5-(1-cyclohexen-1-yl)-5-ethylbarbituric acid</td>
+    </tr>
+    <tr>
+      <td>Phencyclidine</td>
+      <td>1-(1-phenylcyclohexyl)piperidine</td>
+    </tr>
+    <tr>
+      <td>Phenmetrazine</td>
+      <td>3-methyl-2-phenylmorpholine</td>
+    </tr>
+    <tr>
+      <td>Phenobarbital</td>
+      <td>5-ethyl-5-phenylbarbituric acid</td>
+    </tr>
+    <tr>
+      <td>Meprobamate</td>
+      <td>2-methyl-2-propyl-1,3-propanedioldicarbamate</td>
+    </tr>
+    <tr>
+      <td>Methylphenobarbital</td>
+      <td>5-ethyl-1-methyl-5-phenylbarbituric acid</td>
+    </tr>
+    <tr>
+      <td>Methyprylon</td>
+      <td>3,3-diethyl-5-methyl-2,4-piperidine-dione</td>
+    </tr>
+    <tr>
+      <td>Nicocodeine</td>
+      <td>6-nicotinoylcodeine (derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Phendimetrazine</td>
+      <td>(+)-(25,35)-3,4-dimethyl-2-phenylmorpholine</td>
+    </tr>
+    <tr>
+      <td>Phentermine</td>
+      <td>a,a-dimethylphenethylamine</td>
+    </tr>
+    <tr>
+      <td>Mazindol</td>
+      <td>5-(p-chlorophenyl)-2,5-dihydro-3H-imidazo[2,1-alisoindol-5-ol</td>
+    </tr>
+    <tr>
+      <td>Ephedrine</td>
+      <td>([R-(R*,S*)]-a-[1-(methylamino) ethyl]-benzenemethanol)</td>
+    </tr>
+    <tr>
+      <td>N- Acetylanthranilic acid</td>
+      <td>(benzoic acid, 2-(acetylamino)-)</td>
+    </tr>
+    <tr>
+      <td>Pseudoephedrine</td>
+      <td>[S-(R*,R*)]-a-[1-(methylamino)ethyl]-benzenemethanol)</td>
+    </tr>
+    <tr>
+      <td>Ergometrine</td>
+      <td>(ergoline-8-carboxamide, 9,10-didehydro-N-(2-hydroxy\n1-methylethyl)-6-methyl-,[8B(S)])</td>
+    </tr>
+    <tr>
+      <td>Ergotamine</td>
+      <td>(ergotaman-3',6',18'-trione, 12'-hydroxy-2'-methyl-5'-(phenylmethyl)-(5a))</td>
+    </tr>
+    <tr>
+      <td>Safrol</td>
+      <td>(1,3-benzodioxole,5-(2-propenyl)-)</td>
+    </tr>
+    <tr>
+      <td>Isosafrol</td>
+      <td>(1,3-benzodioxole,5-(1-propenyl)-)</td>
+    </tr>
+    <tr>
+      <td>Phenylacetone</td>
+      <td>(1-phenyl-2 -propanone)</td>
+    </tr>
+    <tr>
+      <td>3,4-Methylenedioxyphenyl-2 propanone</td>
+      <td>(2-propanone, 1-[3,4(methylenedioxy)phenyl]-)</td>
+    </tr>
+    <tr>
+      <td>Lysergic acid</td>
+      <td>((88)-9,10-didehydro-6-methylergoline-8-carboxylic acid)</td>
+    </tr>
+    <tr>
+      <td>Piperonal</td>
+      <td>(1,3-benzodioxole-5-carboxaldehyde)</td>
+    </tr>
+    <tr>
+      <td>Mesocarb</td>
+      <td>N-phenyl-N'-[3-(1-phenylpropan-2-yl) oxadiazol-3-ium-5-yl]carbamimidate</td>
+    </tr>
+    <tr>
+      <td>Zipeprol</td>
+      <td>a-(a-methoxybenzyl)-4-(ß-methoxyphenethyl)-1-piperazineethanol</td>
+    </tr>
+    <tr>
+      <td>Cathine</td>
+      <td>(+)-(S)-a-[(S)-1-aminoethyl]benzyl alcohol</td>
+    </tr>
+    <tr>
+      <td>Acetic anhydride</td>
+      <td>(acetic oxide)</td>
+    </tr>
+    <tr>
+      <td>Norephedrine</td>
+      <td>(R*S*)-a-(1-aminoethyl)benzenemethanol</td>
+    </tr>
+    <tr>
+      <td>Allobarbital</td>
+      <td>5,5-diallylbarbituric acid</td>
+    </tr>
+    <tr>
+      <td>Butobarbital</td>
+      <td>5-butyl-5-ethylbarbituric acid</td>
+    </tr>
+    <tr>
+      <td>(GHB)</td>
+      <td>gamma-Hydroxybutyric acid</td>
+    </tr>
+    <tr>
+      <td>(ANPP)</td>
+      <td>4-Anilino -N- Phenethylpiperidine</td>
+    </tr>
+    <tr>
+      <td>(PMK glycidate)</td>
+      <td>3,4 MDP -2- P methyl glycidate</td>
+    </tr>
+    <tr>
+      <td>3,4- MDP -2- p methyl glyci acid</td>
+      <td>3,4 MDP -2 - p methyl glycidic acid</td>
+    </tr>
+    <tr>
+      <td>(NPP)</td>
+      <td>N-Phenethyl -4-piperidone</td>
+    </tr>
+    <tr>
+      <td>Phenylacetic acid</td>
+      <td>Phenylacetic acid</td>
+    </tr>
+    <tr>
+      <td>(APAA)</td>
+      <td>Alpha - phenylacetoacetamide</td>
+    </tr>
+    <tr>
+      <td>(APAAN)</td>
+      <td>Alpha - phenylacetoacetonitrile</td>
+    </tr>
+    <tr>
+      <td>(МАРА)</td>
+      <td>Methyl alpha- phenylacetoacetate</td>
+    </tr>
+    <tr>
+      <td>4-AP</td>
+      <td>4-aminopyridine</td>
+    </tr>
+    <tr>
+      <td>1-boc-4-AP</td>
+      <td>tert-butyl 4-anilinopiperidine-1-carboxylate</td>
+    </tr>
+    <tr>
+      <td>Norfentanyl</td>
+      <td>N-phenyl-N-piperidin-4-yl propanamide</td>
+    </tr>
+  </tbody>
+</table><hr>
+<h2>جدول المخدرات ال3القسم الرابع </h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Substance</th>
+      <th>Active ingredient and discription</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Amphepramon</td>
+      <td>2-(diethylamino)propiophenone</td>
+    </tr>
+    <tr>
+      <td>Benzodiazepine and it' derivatives</td>
+      <td>Drug class</td>
+    </tr>
+    <tr>
+      <td>Ketamine</td>
+      <td>(RS)-2-(2-Chlorophenyl)-2 - (methylamino) cyclohexanone</td>
+    </tr>
+    <tr>
+      <td>Benzhexol</td>
+      <td>(RS)-1-Cyclohexyl-1-phenyl-3-(1piperidyl)propan-1-ol</td>
+    </tr>
+    <tr>
+      <td>Pemoline</td>
+      <td>2-amino-5-phenyl-2-oxazolin-4-one</td>
+    </tr>
+    <tr>
+      <td>Dihydrocodeine</td>
+      <td>(Derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Pholcodine</td>
+      <td>morpholinylethylmorphine (derivative of morphine)</td>
+    </tr>
+    <tr>
+      <td>Codeine</td>
+      <td>3-methylmorphine (derivate of morphine, alkaloid contained in opium and poppy straw)</td>
+    </tr>
+    <tr>
+      <td>Dextropropoxyphene</td>
+      <td>a-(+)-4-dimethylamino-1,2-diphenyl-3-methyl-2-butanol  propionate (Dextro-rotary isomer of propoxyphene)</td>
+    </tr>
+    <tr>
+      <td>Nalbuphine</td>
+      <td>(4R,4aS,7S,7aR, 12bS)-3-(cyclobutylmethyl)-1,2,4,5,6,7,7a, 13-octahydro-4,12-methanobenzofuro[3,2-e]isoquinoline-4a, 7,9-triol</td>
+    </tr>
+    <tr>
+      <td>Tapentadol</td>
+      <td>3-((1R,2R)-3-(dimethylamino)-1-ethyl-2-methylpropyl)phenol</td>
+    </tr>
+    <tr>
+      <td>Zaleplon</td>
+      <td>N-[3-(3-cyanopyrazolo[1,5-ajpyrimidin-7-yl)phenyl]-N-ethylacetamide</td>
+    </tr>
+    <tr>
+      <td>Pregabalin</td>
+      <td>(3S)-3-(aminomethyl)-5 - methylhexanoic acid</td>
+    </tr>
+    <tr>
+      <td>Etizolam</td>
+      <td>4-(2-Chlorophenyl)-2-ethyl-9-methyl-6H-thieno[3,2-f][1,2,4]triazolo[4,3a][1,4]diazepine</td>
+    </tr>
+    <tr>
+      <td>Zolpidem</td>
+      <td>N,N,6-trimethyl-2-p-tolylimidazo[1,2-aJpyridine-3-acetamide</td>
+    </tr>
+    <tr>
+      <td>Triazolobenzodiazepin and it's derivatives</td>
+      <td>Drug Class</td>
+    </tr>
+    <tr>
+      <td>Carisoprodol</td>
+      <td>(RS)-2-{[(amino carbonyl) oxy] methyl) -2-methylpentylisopropylcarbamate</td>
+    </tr>
+    <tr>
+      <td>2-methyl-AP-237</td>
+      <td>1-(2-Methyl-4-(3-phenyl-2-prope-1-yl)-1-piperazinyl)-1-butanone</td>
+    </tr>
+  </tbody>
+</table><hr>
+<h2>الجدول الرابع </h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Substance</th>
+      <th>Active ingredient and discription</th>
+      <th>Maximum dose in a single prescription:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Opium</td>
+      <td>The coagulated juice of the opium poppy (plant species Papaver somniferum L.)</td>
+      <td>600 milligrams</td>
+    </tr>
+    <tr>
+      <td>Morphine Its salts</td>
+      <td>The principal alkaloid of opium and of opium poppy</td>
+      <td>600 milligrams</td>
+    </tr>
+    <tr>
+      <td>Morphine ampoules and its salts</td>
+      <td>The principal alkaloid of opium and of opium poppy</td>
+      <td>60 milligrams</td>
+    </tr>
+    <tr>
+      <td>Di-acetyl morphine and its salts</td>
+      <td>Di- acetyl morphine</td>
+      <td>20 milligrams</td>
+    </tr>
+    <tr>
+      <td>Benzoylmorphine and its salts, as well as all morphine esters and their salts</td>
+      <td>17-Methyl-4,5alpha-epoxymorphina-7-ene-3,6alpha-diol 3-benzoate</td>
+      <td>60 milligrams</td>
+    </tr>
+    <tr>
+      <td>Benzoylmorphine Other ether morphine oxides and their salts, except for ethylmorphine and methylmorphine</td>
+      <td>17-Methyl-4,5alpha-epoxymorphina-7-ene-3,6alpha-diol 3-benzoate</td>
+      <td>100 milligrams</td>
+    </tr>
+    <tr>
+      <td>Desomorphine</td>
+      <td>Dihydrodesoxymorphine (Derivative of morphine)</td>
+      <td>60 milligrams</td>
+    </tr>
+    <tr>
+      <td>Thebaine and its salts</td>
+      <td>(an alkaloid of opium; also found in Papaver bracteatum)</td>
+      <td>150 milligrams</td>
+    </tr>
+    <tr>
+      <td>Oxymorphone and its compounds, as well as other morphine derivatives with pentavalent nitrogen</td>
+      <td>14-hydroxydihydromorphinone</td>
+      <td>200 milligrams</td>
+    </tr>
+    <tr>
+      <td>Oxycodone and its salts, esters, and salts of these esters</td>
+      <td>14-hydroxydihydrocodeinon (Derivative of morphine)</td>
+      <td>60 milligrams</td>
+    </tr>
+    <tr>
+      <td>Hydrocodone and its salts, esters, and salts of these esters</td>
+      <td>dihydrocodeinone</td>
+      <td>60 milligrams</td>
+    </tr>
+    <tr>
+      <td>Acetyl dihydrocodeinone and its salts, esters, and salts of these esters</td>
+      <td>Acetyl dihydro codeinone</td>
+      <td>60 milligrams</td>
+    </tr>
+    <tr>
+      <td>Hydromorphone and its salts, esters, and salts of these esters</td>
+      <td>Dihydromorphinone (Derivative of morphine)</td>
+      <td>10 milligrams</td>
+    </tr>
+    <tr>
+      <td>Dihydromorphine and its salts, esters, and salts of these esters</td>
+      <td>dihydromorphine</td>
+      <td>60 milligrams</td>
+    </tr>
+    <tr>
+      <td>Methyl dihydromorphinone and its salts</td>
+      <td>methyl dihydromorphinone</td>
+      <td>300 milligrams</td>
+    </tr>
+    <tr>
+      <td>Cocaine and its salts for internal use, provided that the compound does not exceed 4%</td>
+      <td>Methyl ester of benzoylecgonine (an alkaloid found in coca leaves or prepared by synthesis from ecgonine)</td>
+      <td>100 milligrams</td>
+    </tr>
+    <tr>
+      <td>Cocaine and its salts for external use, provided that the compound does not exceed 4%</td>
+      <td>Methyl ester of benzoylecgonine (an alkaloid found in coca leaves or prepared by synthesis from ecgonine)</td>
+      <td>400 milligrams</td>
+    </tr>
+    <tr>
+      <td>Ecgonine and its salts, esters, and salts of these esters</td>
+      <td>Its esters and derivatives which are convertible to ecgonine anc cocaine</td>
+      <td>100 milligrams</td>
+    </tr>
+    <tr>
+      <td>Pethidine and its salts</td>
+      <td>1-methyl-4-phenylpiperidine-4-carboxylic acid ethyl ester</td>
+      <td>650 milligrams</td>
+    </tr>
+    <tr>
+      <td>Cannabis</td>
+      <td>Cannabis</td>
+      <td>600 milligrams</td>
+    </tr>
+    <tr>
+      <td>Cannabis resin</td>
+      <td>Cannabis resin</td>
+      <td>200 milligrams</td>
+    </tr>
+    <tr>
+      <td>Cannabis extract</td>
+      <td>Cannabis extract</td>
+      <td>200 milligrams</td>
+    </tr>
+    <tr>
+      <td>Cannabis liquid extract</td>
+      <td>Cannabis liquid extract</td>
+      <td>0.6 milliliters</td>
+    </tr>
+    <tr>
+      <td>Cannabis tincture</td>
+      <td>Cannabis tincture</td>
+      <td>4 milliliters</td>
+    </tr>
+    <tr>
+      <td>Methadone and its salts</td>
+      <td>6-dimethylamino-4,4-diphenyl-3-heptanone</td>
+      <td>125 milligrams</td>
+    </tr>
+    <tr>
+      <td>Phenadoxone and its salts</td>
+      <td>6-morpholin-4-yl-4,4-diphenylheptan-3-one</td>
+      <td>250 milligrams</td>
+    </tr>
+    <tr>
+      <td>Dexamphetamine ampoules</td>
+      <td>(2S)-1-phenylpropan-2-amine</td>
+      <td>Ampoules</td>
+    </tr>
+    <tr>
+      <td>Dexamphetamine tablets</td>
+      <td>(2S)-1-phenylpropan-2-amine</td>
+      <td>30 tablets</td>
+    </tr>
+    <tr>
+      <td>Amphetamine tablets</td>
+      <td>1-phenylpropan-2-amine</td>
+      <td>20 tablets</td>
+    </tr>
+    <tr>
+      <td>Glutethimide tablets</td>
+      <td>2-ethyl-2-phenylglutarimide</td>
+      <td>30 tablets</td>
+    </tr>
+    <tr>
+      <td>Amobarbital sodium ampoules</td>
+      <td>5-ethyl-5-isopentylbarbituric acid</td>
+      <td>6 ampoules</td>
+    </tr>
+    <tr>
+      <td>Amobarbital tablets or capsules</td>
+      <td>5-ethyl-5-isopentylbarbituric acid</td>
+      <td>30 tablets</td>
+    </tr>
+    <tr>
+      <td>Methylphenidate ampoules</td>
+      <td>methyl 2-phenyl-2- (piperidin-2-yl) acetate</td>
+      <td>Ampoules</td>
+    </tr>
+    <tr>
+      <td>Methylphenidate tablets</td>
+      <td>methyl 2-phenyl-(piperidin-2-yl) acetate</td>
+      <td>30 tablets</td>
+    </tr>
+    <tr>
+      <td>Secobarbital tablets</td>
+      <td>5-allyl-5-(1-methylbutyl) barbituric acid</td>
+      <td>30 tablets</td>
+    </tr>
+    <tr>
+      <td>Methamphetamine ampoules</td>
+      <td>(+)-(S)-N,a-dimethylphenethylamine</td>
+      <td>Ampoules</td>
+    </tr>
+    <tr>
+      <td>Methamphetamine tablets</td>
+      <td>(+)-(S)-N,a-dimethylphenethylamine</td>
+      <td>25 tablets</td>
+    </tr>
+    <tr>
+      <td>Pentazocine</td>
+      <td>(2R*,6R*,11R*)-1,2,3,4,5,6-hexahydro-6,11-dimethyl-3-(3-methyl-2-butenyl)-2,6-methano3-benzazocin-8-ol</td>
+      <td>150 milligrams</td>
+    </tr>
+  </tbody>
+</table><hr>
+<h2>الجدول الخامس نباتات </h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Cannabis (in all its varieties and names, whether male or female)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Papaver somniferum (in all its varieties and names)</td>
+    </tr>
+    <tr>
+      <td>All Papaver species (in all types within the genus Papaver)</td>
+    </tr>
+    <tr>
+      <td>Erythroxylum coca (in all its varieties and names)</td>
+    </tr>
+    <tr>
+      <td>Khat (in all its varieties and names)</td>
+    </tr>
+  </tbody>
+</table><hr>
+<h2>جدول السادس اجزاء من النباتات</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Fibers of cannabis stalks.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Roasted cannabis seeds, roasted in a manner that ensures they cannot germinate.</td>
+    </tr>
+    <tr>
+      <td>Roasted poppy seeds, roasted in a manner that ensures they cannot germinate.</td>
+    </tr>
+    <tr>
+      <td>Scored poppy heads devoid of seeds.</td>
+    </tr>
+  </tbody>
+</table><hr>
+</div>
+</body>
+</html>
