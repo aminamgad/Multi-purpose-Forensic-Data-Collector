@@ -6,7 +6,7 @@ fetch('data.json')
   .then(response => response.json())
   .then(jsonData => {
     data = jsonData; // Store the data globally
-    updateSearchInputs(); // Generate input fields after data is loaded
+    updateSearchInputs();
   })
   .catch(err => console.error('Failed to load JSON:', err));
 
@@ -64,9 +64,8 @@ function updateSearchInputs() {
 
   if (category === 'currencies') {
     const searchKeys = [
-      { key: 'denomination', label: 'Denomination of Currency', type: 'dropdown' },
-      { key: 'releaseDate', label: 'Release Date', type: 'dropdown' },
-      { key: 'serialNumber', label: 'Serial Number', type: 'text' } // Text input for manual entry
+      { key: 'Date of release', label: 'Release Date', type: 'dropdown' },
+      { key: 'Serial Number', label: 'Serial Number', type: 'text' } // Text input for manual entry
     ];
 
     searchKeys.forEach(item => {
@@ -102,10 +101,10 @@ function updateSearchInputs() {
   }
 
   // Handle 'rivets' category
-  else if (category === 'rivets') {
+  else if (category === 'lethaldose') {
     const searchKeys = [
-      { key: 'rivetPoison', label: 'Rivet Poison', type: 'dropdown' },
-      { key: 'lethalDose', label: 'Lethal Dose (mg/kg)', type: 'dropdown' },
+      { key: 'Drug/Poison Name', label: 'Drug/Poison Name', type: 'dropdown' },
+      { key: 'ld', label: 'ld', type: 'dropdown' },
       { key: 'personWeight', label: "Person's Weight (kg)", type: 'text' }, // Text input for weight
       { key: 'doseTaken', label: 'Dose Taken (mg)', type: 'text' } // Text input for dose
     ];
@@ -123,7 +122,7 @@ function updateSearchInputs() {
         input.innerHTML = `<option value="">Select ${item.label}</option>`; // Default option
   
         // Populate dropdown options from JSON database
-        const uniqueValues = [...new Set(data.rivets.map(rivet => rivet[item.key]))];
+        const uniqueValues = [...new Set(data.lethaldose.map(rivet => rivet[item.key]))];
         uniqueValues.forEach(value => {
           const option = document.createElement('option');
           option.value = value;
@@ -145,7 +144,7 @@ function updateSearchInputs() {
     const calcButton = document.createElement('button');
     calcButton.textContent = 'Check if Dose is Lethal';
     calcButton.addEventListener('click', () => {
-      const lethalDose = parseFloat(document.getElementById('lethalDose').value);
+      const lethalDose = parseFloat(document.getElementById('ld').value);
       const personWeight = parseFloat(document.getElementById('personWeight').value);
       const doseTaken = parseFloat(document.getElementById('doseTaken').value);
   
@@ -172,13 +171,13 @@ function updateSearchInputs() {
   }
       
   // Handle 'rivetMaterial' category
-  else if (category === 'rivetMaterial') {
+  else if (category === 'drugidentification') {
     const searchKeys = [
-      { key: 'pillType', label: 'Pill Type (Pill or Capsule)', type: 'dropdown' },
-      { key: 'shape', label: 'Shape', type: 'dropdown' },
-      { key: 'color', label: 'Color', type: 'dropdown' },
-      { key: 'size', label: 'Size', type: 'dropdown' },
-      { key: 'printing', label: 'Printing or Shapes on Pill', type: 'dropdown' }
+      { key: 'Name', label: 'Name', type: 'dropdown' },
+      { key: 'Colour', label: 'Colour', type: 'dropdown' },
+      { key: 'Type', label: 'Type', type: 'dropdown' },
+      { key: 'Size', label: 'Size', type: 'dropdown' },
+      { key: 'Imprint', label: 'Imprint', type: 'dropdown' }
     ];
 
     searchKeys.forEach(item => {
@@ -191,7 +190,7 @@ function updateSearchInputs() {
       select.innerHTML = `<option value="">Select ${item.label}</option>`; // Default option
 
       // Populate dropdown options from JSON database
-      const uniqueValues = [...new Set(data.rivetMaterials.map(material => material[item.key]))];
+      const uniqueValues = [...new Set(data.drugidentification.map(material => material[item.key]))];
       uniqueValues.forEach(value => {
         const option = document.createElement('option');
         option.value = value;
@@ -205,7 +204,7 @@ function updateSearchInputs() {
   }
   else if (category === 'Weapons') {
     const searchKeys = [
-      { key: 'Type', label: 'Type', type: 'dropdown' },
+      { key: 'Weapon Name', label: 'Weapon Name', type: 'dropdown' },
     ];
 
     searchKeys.forEach(item => {
@@ -259,7 +258,6 @@ function updateSearchInputs() {
   }
 }
 
-// Perform search based on selected input
 function performSearch() {
   const category = document.getElementById('category').value;
   const inputs = document.querySelectorAll('#dynamic-inputs select, #dynamic-inputs input');
@@ -280,14 +278,14 @@ function performSearch() {
         return !searchParams[key] || currency[key] === searchParams[key];
       });
     });
-  } else if (category === 'rivets') {
-    result = data.rivets.filter(rivet => {
+  } else if (category === 'lethaldose') {
+    result = data.lethaldose.filter(rivet => {
       return Object.keys(searchParams).every(key => {
         return !searchParams[key] || rivet[key] === searchParams[key];
       });
     });
-  } else if (category === 'rivetMaterial') {
-    result = data.rivetMaterials.filter(material => {
+  } else if (category === 'drugidentification') {
+    result = data.drugidentification.filter(material => {
       return Object.keys(searchParams).every(key => {
         return !searchParams[key] || material[key] === searchParams[key];
       });
@@ -309,32 +307,66 @@ function performSearch() {
   }
 
   // Display result in the UI
-  displayResults(result);
+  displayResults(result,category);
 }
 
 // Function to display the search results in a beautiful format
-function displayResults(results) {
+function displayResults(results, category) {
   const resultContent = document.getElementById('result-content');
   resultContent.innerHTML = ''; // Clear previous results
+  const resultDiv = document.createElement('div');
+  resultDiv.classList.add('results-container');
 
   if (results.length === 0) {
     resultContent.innerHTML = `<div class="no-results">No results found</div>`;
     return;
   }
 
-  // Loop through each result and display it in a card-like structure
-  results.forEach(result => {
-    const resultDiv = document.createElement('div');
-    resultDiv.classList.add('search-result');
+  if (category === 'currencies') {
+    results.forEach(result => {
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add('message');
 
-    for (let key in result) {
-      if (result.hasOwnProperty(key)) {
-        const fieldDiv = document.createElement('div');
-        fieldDiv.innerHTML = `<span class="label">${key}:</span> ${result[key]}`;
-        resultDiv.appendChild(fieldDiv);
+      // If the result has an image, display it
+      if (result.img) {
+        const imgElement = document.createElement('img');
+        imgElement.src = result.img;
+        imgElement.alt = result.place || 'Currency Image';
+        imgElement.classList.add('result-image');
+        messageDiv.appendChild(imgElement);
       }
-    }
 
-    resultContent.appendChild(resultDiv);
-  });
+      // Display message and place
+      messageDiv.innerHTML += `<strong>Message:</strong> ${result.msg || 'N/A'}<br>
+                                <strong>Place:</strong> ${result.place || 'N/A'}`;
+      resultDiv.appendChild(messageDiv);
+    });
+  } else {
+    results.forEach(result => {
+      const itemDiv = document.createElement('div');
+      itemDiv.classList.add('result-item');
+
+      // If the result has an image, display it
+      if (result.img) {
+        const imgElement = document.createElement('img');
+        imgElement.src = result.img;
+        imgElement.alt = result.name || 'Image';
+        imgElement.classList.add('result-image');
+        itemDiv.appendChild(imgElement);
+      }
+
+      // Display other properties of the result
+      for (let key in result) {
+        if (result.hasOwnProperty(key) && key !== 'img') {
+          const fieldDiv = document.createElement('div');
+          fieldDiv.innerHTML = `<span class="label">${key}:</span> ${result[key]}`;
+          itemDiv.appendChild(fieldDiv);
+        }
+      }
+
+      resultDiv.appendChild(itemDiv);
+    });
+  }
+
+  resultContent.appendChild(resultDiv);
 }

@@ -3,44 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3D Animated Home Page</title>
+  <title>3D Gun Animation</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="background-animation"></div>
-  
   <header class="navbar">
     <div class="logo">ForensicsTech</div>
     <nav>
       <ul class="nav-links">
-        <li><a href="about.html" >About</a></li>
-        <li><a href="drug.html" >Drugs</a></li>
-        <li><a href="services.html" >Services</a></li>
-        <li><a href="contact.html" >Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="services.html" target="_blank">Services</a></li>
+        <li><a href="drug.html" target="_blank">Drugs</a></li>
+        <li><a href="#contact" >Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Explore Forensic Innovations</h1>
-      <p>Pioneering forensic and chemical technologies for tomorrow.</p>
-      <a href="about.html" target="_blank" class="cta-button">Learn More</a>
-    </div>
-    <div class="hero-animation">
-      <div class="cube">
-        <div class="face front">F</div>
-        <div class="face back">B</div>
-        <div class="face left">L</div>
-        <div class="face right">R</div>
-        <div class="face top">T</div>
-        <div class="face bottom">B</div>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Forensic Weapons Analysis</h1>
+        <p>Explore the future of forensic science.</p>
+        <a href="about.html" class="cta-button" target="_blank">Learn More</a>
       </div>
-    </div>
-  </section>
+      <div class="gun-container">
+        <div class="gun">
+          <div class="barrel"></div>
+          <div class="handle"></div>
+          <div class="trigger"></div>
+          <div class="grip"></div>
+        </div>
+      </div>
+    </section>
+    <main>
+      <section id="about" class="section">
+        <h1>About Us</h1>
+        <p>Learn about our mission and team.</p>
+      </section>
+  
+
+      <section id="contact" class="section">
+        <h1>Contact Us</h1>
+        <p>Get in touch for more information.</p>
+      </section>
+    </main>
+  </main>
 
   <footer class="footer">
     <p>© 2024 ForensicsTech. All rights reserved.</p>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>

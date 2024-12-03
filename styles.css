@@ -155,4 +155,254 @@
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
   }
+  .hero-animation {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
+  canvas {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    display: block;
+  }
+  
+  /* Other styles remain unchanged */
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #232340);
+    color: white;
+    overflow-x: hidden;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #f39c12;
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    background: #f39c12;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .cta-button:hover {
+    background: #e67e22;
+  }
+  
+  /* Gun Container */
+  .gun-container {
+    perspective: 1000px;
+    margin-top: 2rem;
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform: rotateX(-20deg);
+  }
+  
+  /* 3D Gun */
+  .gun {
+    width: 180px;
+    height: 60px;
+    background: #555;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(0deg);
+    transform-style: preserve-3d;
+  }
+  
+  .barrel {
+    width: 130px;
+    height: 20px;
+    background: #222;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateZ(20px);
+    border-radius: 5px;
+  }
+  
+  .handle {
+    width: 50px;
+    height: 70px;
+    background: #333;
+    position: absolute;
+    bottom: -40px;
+    left: 35px;
+    transform: translateZ(20px) rotateX(20deg);
+    border-radius: 5px;
+  }
+  
+  .trigger {
+    width: 15px;
+    height: 30px;
+    background: #444;
+    position: absolute;
+    bottom: -25px;
+    left: 95px;
+    transform: translateZ(10px) rotateZ(-15deg);
+    border-radius: 2px;
+  }
+  
+  .grip {
+    width: 20px;
+    height: 30px;
+    background: #111;
+    position: absolute;
+    bottom: -40px;
+    left: 120px;
+    transform: translateZ(30px) rotateY(90deg);
+    border-radius: 5px;
+  }
+  
+  /* Footer */
+  .footer {
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 1rem;
+  }
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #232340);
+    color: white;
+    overflow-x: hidden;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+  }
+  
+  .navbar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .nav-links li a:hover {
+    background-color: #f39c12;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 150, 0, 0.5);
+  }
+  
+  /* Logo Style */
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #f39c12;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    background: #f39c12;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .cta-button:hover {
+    background: #e67e22;
+    color: #fff;
+  }
+  
+  /* Footer */
+  .footer {
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 1rem;
+  }
+      

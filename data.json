@@ -1,172 +1,351 @@
 {
-    "currencies": [
-      { "denomination": "1000", "releaseDate": "2022", "serialNumber": "A12345" },
-      { "denomination": "10000", "releaseDate": "202222", "serialNumber": "A12345" },
-      { "denomination": "2000", "releaseDate": "2015", "serialNumber": "A12445","type":"euro" },
-      { "denomination": "500", "releaseDate": "2023", "serialNumber": "B67890" }
-    ],
-    "rivets": [
-        { "rivetPoison": "Lead", "lethalDose": 5, "personWeight": 70, "doseTaken": 350 },
-        { "rivetPoison": "Copper", "lethalDose": 10, "personWeight": 60, "doseTaken": 600 }
-    ],
-    "rivetMaterials": [
-      { "pillType": "Pill", "shape": "Round", "color": "Red", "size": "Small", "printing": "A" },
-      { "pillType": "Capsule", "shape": "Oval", "color": "Blue", "size": "Large", "printing": "B" }
-    ]
-    ,
-    "Weapons": [
-        {
-            "Serial Number":"SN12345",
-            "Projectile Shape":"Pointed (Bullet)",
-            "Number of Rounds":30,
-            "Type":"Assault Rifle",
-            "Manufacturing Location":"Kalashnikov Concern, Russia",
-            "Muzzle Diameter":"7.62 mm",
-            "Relation to Firing Distance":"Effective range up to 400 meters, designed for accuracy and moderate penetration."
-        },
-        {
-            "Serial Number":"SN56789",
-            "Projectile Shape":"Cylindrical (Bullet)",
-            "Number of Rounds":20,
-            "Type":"Sniper Rifle",
-            "Manufacturing Location":"Barrett Firearms, USA",
-            "Muzzle Diameter":"12.7 mm",
-            "Relation to Firing Distance":"Long-range precision (up to 1,800 meters), larger diameter ensures stability and energy retention."
-        },
-        {
-            "Serial Number":"SN98765",
-            "Projectile Shape":"Rounded (Pellet)",
-            "Number of Rounds":8,
-            "Type":"Shotgun",
-            "Manufacturing Location":"Benelli Armi, Italy",
-            "Muzzle Diameter":"18.5 mm",
-            "Relation to Firing Distance":"Close range (up to 50 meters), wide spread due to large diameter, suitable for multiple targets."
-        },
-        {
-            "Serial Number":"SN54321",
-            "Projectile Shape":"Hollow-point (Bullet)",
-            "Number of Rounds":15,
-            "Type":"Handgun",
-            "Manufacturing Location":"Glock GmbH, Austria",
-            "Muzzle Diameter":"9 mm",
-            "Relation to Firing Distance":"Effective for short-range encounters (up to 50 meters), designed to expand upon impact."
-        },
-        {
-            "Serial Number":"SN11223",
-            "Projectile Shape":"Armor-piercing (Bullet)",
-            "Number of Rounds":10,
-            "Type":"Submachine Gun",
-            "Manufacturing Location":"Heckler & Koch, Germany",
-            "Muzzle Diameter":"4.6 mm",
-            "Relation to Firing Distance":"Effective at 200 meters, small diameter enables high penetration of armor or barriers."
-        },
-        {
-            "Serial Number":"SN33445",
-            "Projectile Shape":"Fragmentation (Shell)",
-            "Number of Rounds":1,
-            "Type":"Grenade Launcher",
-            "Manufacturing Location":"FN Herstal, Belgium",
-            "Muzzle Diameter":"40 mm",
-            "Relation to Firing Distance":"Effective radius of explosion up to 10 meters, larger diameter accommodates explosive payload."
-        },
-        {
-            "Serial Number":"SN55667",
-            "Projectile Shape":"Cylindrical (Missile)",
-            "Number of Rounds":6,
-            "Type":"Rocket Launcher",
-            "Manufacturing Location":"RPG-7, Russia",
-            "Muzzle Diameter":"85 mm",
-            "Relation to Firing Distance":"Effective against armored targets up to 500 meters, diameter allows for significant explosive charge."
-        },
-        {
-            "Serial Number":"SN77889",
-            "Projectile Shape":"Conical (Bullet)",
-            "Number of Rounds":5,
-            "Type":"Revolver",
-            "Manufacturing Location":"Colt\u2019s Manufacturing, USA",
-            "Muzzle Diameter":"10.9 mm",
-            "Relation to Firing Distance":"Short-range weapon (up to 30 meters), ideal for personal defense and concealability."
-        },
-        {
-            "Serial Number":"SN99001",
-            "Projectile Shape":"Explosive (Shell)",
-            "Number of Rounds":1,
-            "Type":"Mortar",
-            "Manufacturing Location":"IMI Systems, Israel",
-            "Muzzle Diameter":"81 mm",
-            "Relation to Firing Distance":"Indirect fire weapon with ranges up to 6,000 meters, muzzle size allows for high explosive payload delivery."
-        },
-        {
-            "Serial Number":"SN10101",
-            "Projectile Shape":"Ball-shaped (Shell)",
-            "Number of Rounds":1,
-            "Type":"Tank Cannon",
-            "Manufacturing Location":"Rheinmetall, Germany",
-            "Muzzle Diameter":"120 mm",
-            "Relation to Firing Distance":"High-explosive anti-tank shells effective at 3,000 meters, large diameter ensures maximum destructive impact."
-        }
-    ],
-    "pens":[
-        {
-          "Pen Name": "Pilot Gel Pen",
-          "Ink Color": "Black",
-          "Chemical Composition": "Water-based gel ink (dye-based)",
-          "Identification Reaction": "UV light reveals the ink's fluorescence."
-        },
-        {
-          "Pen Name": "Schneider Ballpen",
-          "Ink Color": "Blue",
-          "Chemical Composition": "Oil-based ink (ethylene glycol)",
-          "Identification Reaction": "Ink dissolves in isopropanol, leaving behind faint color traces."
-        },
-        {
-          "Pen Name": "Bic Cristal",
-          "Ink Color": "Red",
-          "Chemical Composition": "Oil-based ink (alkylphenols)",
-          "Identification Reaction": "Reacts with iodine, producing a faint brownish hue."
-        },
-        {
-          "Pen Name": "Staedtler Fineliner",
-          "Ink Color": "Green",
-          "Chemical Composition": "Water-based ink (dye-based)",
-          "Identification Reaction": "Paper chromatography shows separation of ink components."
-        },
-        {
-          "Pen Name": "Uni-ball Eye",
-          "Ink Color": "Blue-Black",
-          "Chemical Composition": "Pigment-based ink",
-          "Identification Reaction": "Reacts with bleach, turning faint yellowish."
-        },
-        {
-          "Pen Name": "Luxor Marker",
-          "Ink Color": "Purple",
-          "Chemical Composition": "Alcohol-based ink (xylene)",
-          "Identification Reaction": "Ink dissolves in ethanol; no residue remains."
-        },
-        {
-          "Pen Name": "Faber-Castell Highlighter",
-          "Ink Color": "Yellow",
-          "Chemical Composition": "Water-based fluorescent dye",
-          "Identification Reaction": "Fluorescence under UV light confirms the dye type."
-        },
-        {
-          "Pen Name": "Rotring Isograph",
-          "Ink Color": "Black",
-          "Chemical Composition": "Pigment-based ink (acrylic)",
-          "Identification Reaction": "Reacts with acetone; ink particles clump and settle."
-        },
-        {
-          "Pen Name": "Dollar Fountain Pen",
-          "Ink Color": "Blue",
-          "Chemical Composition": "Water-based ink (dye-based)",
-          "Identification Reaction": "Reacts with vinegar, causing a slight color change to greenish-blue."
-        },
-        {
-          "Pen Name": "Parker Pen",
-          "Ink Color": "Black",
-          "Chemical Composition": "Solvent-based ink (phenol compounds)",
-          "Identification Reaction": "Heat exposure darkens the ink, indicating solvent-based properties."
-        }
-      ]      
-  }
-  
+  "currencies": [
+    {
+      "Currency denomination": "Two Hundred pounds",
+      "Serial Number": "٥٤٨١٩٤٢ ي/٢٧١",
+      "Date of release": "2023",
+      "place": "Mansoura",
+      "msg": "true"
+    },
+    {
+      "Currency denomination": "Two Hundred pounds",
+      "Serial Number": "٩١٩٣٣٠٤ ي/٤٠٠",
+      "Date of release": "2016",
+      "place": "Mansoura",
+      "msg": "true"
+    },
+    {
+      "Currency denomination": "Two Hundred pounds",
+      "Serial Number": "٥٥٨٨٠٩٤ ي/١٢١",
+      "Date of release": "2015",
+      "place": "Mansoura",
+      "msg": "true"
+    },
+    {
+      "Currency denomination": "One Hundred pounds",
+      "Serial Number": "٤٥٤٣٢٥٤ ن/٦٩٨",
+      "Date of release": "2024",
+      "place": "Mansoura",
+      "msg": "true"
+    },
+    {
+      "Currency denomination": "One Hundred pounds",
+      "Serial Number": "٧١٨٥٢٥٨ ن/٦٧٢",
+      "Date of release": "2023",
+      "place": "Mansoura",
+      "msg": "true"
+    },
+    {
+      "Currency denomination": "Two Hundred pounds",
+      "Serial Number": "٥٤٨١٩٤٢ ي/٤٧٩",
+      "Date of release": "2023",
+      "place": "Mansoura",
+      "msg": "true"
+    },
+    {
+      "Currency denomination": "Two Hundred pounds",
+      "Serial Number": "٧٣٤٦٨٧٣ ي/٢٧١",
+      "Date of release": "2020",
+      "place": "Mansoura",
+      "msg": "true"
+    },
+    {
+      "Currency denomination": "One Hundred pounds",
+      "Serial Number": "٨٤١٧٧٦٧ ن/٥٣٥",
+      "Date of release": "2021",
+      "place": "Mansoura",
+      "msg": "true"
+    },
+    {
+      "Currency denomination": "One Hundred pounds",
+      "Serial Number": "٩٠٣٥٩٢٥ ن/٥٨١",
+      "Date of release": "2022",
+      "place": "Mansoura",
+      "msg": "true"
+    }
+  ],
+  "lethaldose": [
+    {
+      "Drug/Poison Name": "Paracetamol",
+      "ld": 338,
+      "Route of administration": "Oral",
+      "img":"./public/Screenshot 2023-02-24 175833.jpg"
+    },
+    {
+      "Drug/Poison Name": "Asprin",
+      "ld": 200,
+      "Route of administration": "Oral",
+      "img":"./public/Screenshot 2023-02-24 175833.jpg"
+    },
+    {
+      "Drug/Poison Name": "Ibuprofen",
+      "ld": 636,
+      "Route of administration": "Oral"
+    },
+    {
+      "Drug/Poison Name": "Morphine",
+      "ld": 200,
+      "Route of administration": "Oral"
+    },
+    {
+      "Drug/Poison Name": "Caffeine",
+      "ld": 190,
+      "Route of administration": "Oral"
+    },
+    {
+      "Drug/Poison Name": "Sodium cyanide",
+      "ld": 5,
+      "Route of administration": "Oral"
+    },
+    {
+      "Drug/Poison Name": "Ricim",
+      "ld": 0.0003,
+      "Route of administration": "Oral"
+    },
+    {
+      "Drug/Poison Name": "Mercury",
+      "ld": 1.5,
+      "Route of administration": "Oral"
+    },
+    {
+      "Drug/Poison Name": "Arsenic",
+      "ld": 1,
+      "Route of administration": "Oral"
+    },
+    {
+      "Drug/Poison Name": "Botulinum toxin",
+      "ld": 0.0001,
+      "Route of administration": "Inhaled"
+    }
+  ],
+  "drugidentification": [
+    {
+      "Name": "Tramadol",
+      "Colour": "White",
+      "Size": "11.00mg",
+      "Type": "Tab",
+      "Imprint": "93 58"
+    },
+    {
+      "Name": "Diazepam",
+      "Colour": "Yellow",
+      "Size": "8.00mg",
+      "Type": "Tab",
+      "Imprint": "TEVA 3926"
+    },
+    {
+      "Name": "Xanax",
+      "Colour": "White",
+      "Size": "15.00mg",
+      "Type": "Tab",
+      "Imprint": "XANAX 2"
+    },
+    {
+      "Name": "Morphine",
+      "Colour": "Purple",
+      "Size": "7.00mg",
+      "Type": "Tab",
+      "Imprint": "30M"
+    },
+    {
+      "Name": "Advil",
+      "Colour": "Brown",
+      "Size": "11.00mg",
+      "Type": "Tab",
+      "Imprint": "Advil"
+    },
+    {
+      "Name": "Vicodin",
+      "Colour": "White",
+      "Size": "14.00mg",
+      "Type": "Tab",
+      "Imprint": "VICODIN5  300"
+    },
+    {
+      "Name": "Oxycodone",
+      "Colour": "White",
+      "Size": "10.00mg",
+      "Type": "Tab",
+      "Imprint": "OC 10"
+    },
+    {
+      "Name": "Vicodin",
+      "Colour": "White",
+      "Size": "5.00mg",
+      "Type": "Tab",
+      "Imprint": "V 35 92"
+    },
+    {
+      "Name": "Dolophine",
+      "Colour": "White",
+      "Size": "10.00mg",
+      "Type": "Tab",
+      "Imprint": "M 57 71"
+    }
+  ],
+  "Weapons": [
+    {
+      "Weapon Name": "AK-47",
+      "img":"./public/Screenshot 2023-02-24 175833.jpg",
+      "Serial Number": "SN12345",
+      "Projectile Shape": "Pointed (Bullet)",
+      "Number of Rounds": 30,
+      "Type": "Assault Rifle",
+      "Manufacturing Location": "Kalashnikov Concern, Russia",
+      "Muzzle Diameter": "7.62 mm",
+      "Relation to Firing Distance": "Effective range up to 400 meters, designed for accuracy and moderate penetration."
+    },
+    {
+      "Weapon Name": "Barrett M82",
+      "Serial Number": "SN56789",
+      "Projectile Shape": "Cylindrical (Bullet)",
+      "Number of Rounds": 20,
+      "Type": "Sniper Rifle",
+      "Manufacturing Location": "Barrett Firearms, USA",
+      "Muzzle Diameter": "12.7 mm",
+      "Relation to Firing Distance": "Long-range precision (up to 1,800 meters), larger diameter ensures stability and energy retention."
+    },
+    {
+      "Weapon Name": "Benelli M4",
+      "Serial Number": "SN98765",
+      "Projectile Shape": "Rounded (Pellet)",
+      "Number of Rounds": 8,
+      "Type": "Shotgun",
+      "Manufacturing Location": "Benelli Armi, Italy",
+      "Muzzle Diameter": "18.5 mm",
+      "Relation to Firing Distance": "Close range (up to 50 meters), wide spread due to large diameter, suitable for multiple targets."
+    },
+    {
+      "Weapon Name": "Glock 17",
+      "Serial Number": "SN54321",
+      "Projectile Shape": "Hollow-point (Bullet)",
+      "Number of Rounds": 15,
+      "Type": "Handgun",
+      "Manufacturing Location": "Glock GmbH, Austria",
+      "Muzzle Diameter": "9 mm",
+      "Relation to Firing Distance": "Effective for short-range encounters (up to 50 meters), designed to expand upon impact."
+    },
+    {
+      "Weapon Name": "MP5",
+      "Serial Number": "SN11223",
+      "Projectile Shape": "Armor-piercing (Bullet)",
+      "Number of Rounds": 10,
+      "Type": "Submachine Gun",
+      "Manufacturing Location": "Heckler & Koch, Germany",
+      "Muzzle Diameter": "4.6 mm",
+      "Relation to Firing Distance": "Effective at 200 meters, small diameter enables high penetration of armor or barriers."
+    },
+    {
+      "Weapon Name": "FN M203",
+      "Serial Number": "SN33445",
+      "Projectile Shape": "Fragmentation (Shell)",
+      "Number of Rounds": 1,
+      "Type": "Grenade Launcher",
+      "Manufacturing Location": "FN Herstal, Belgium",
+      "Muzzle Diameter": "40 mm",
+      "Relation to Firing Distance": "Effective radius of explosion up to 10 meters, larger diameter accommodates explosive payload."
+    },
+    {
+      "Weapon Name": "RPG-7",
+      "Serial Number": "SN55667",
+      "Projectile Shape": "Cylindrical (Missile)",
+      "Number of Rounds": 6,
+      "Type": "Rocket Launcher",
+      "Manufacturing Location": "RPG-7, Russia",
+      "Muzzle Diameter": "85 mm",
+      "Relation to Firing Distance": "Effective against armored targets up to 500 meters, diameter allows for significant explosive charge."
+    },
+    {
+      "Weapon Name": "Colt Python",
+      "Serial Number": "SN77889",
+      "Projectile Shape": "Conical (Bullet)",
+      "Number of Rounds": 5,
+      "Type": "Revolver",
+      "Manufacturing Location": "Colt’s Manufacturing, USA",
+      "Muzzle Diameter": "10.9 mm",
+      "Relation to Firing Distance": "Short-range weapon (up to 30 meters), ideal for personal defense and concealability."
+    },
+    {
+      "Weapon Name": "M120 Mortar",
+      "Serial Number": "SN99001",
+      "Projectile Shape": "Explosive (Shell)",
+      "Number of Rounds": 1,
+      "Type": "Mortar",
+      "Manufacturing Location": "IMI Systems, Israel",
+      "Muzzle Diameter": "81 mm",
+      "Relation to Firing Distance": "Indirect fire weapon with ranges up to 6,000 meters, muzzle size allows for high explosive payload delivery."
+    },
+    {
+      "Weapon Name": "Leopard 2 Cannon",
+      "Serial Number": "SN10101",
+      "Projectile Shape": "Ball-shaped (Shell)",
+      "Number of Rounds": 1,
+      "Type": "Tank Cannon",
+      "Manufacturing Location": "Rheinmetall, Germany",
+      "Muzzle Diameter": "120 mm",
+      "Relation to Firing Distance": "High-explosive anti-tank shells effective at 3,000 meters, large diameter ensures maximum destructive impact."
+    }
+  ],
+  "pens": [
+    {
+      "Pen Name": "Pilot Gel Pen",
+      "Ink Color": "Black",
+      "Chemical Composition": "Water-based gel ink (dye-based)",
+      "Identification Reaction": "UV light reveals the ink's fluorescence."
+    },
+    {
+      "Pen Name": "Schneider Ballpen",
+      "Ink Color": "Blue",
+      "Chemical Composition": "Oil-based ink (ethylene glycol)",
+      "Identification Reaction": "Ink dissolves in isopropanol, leaving behind faint color traces."
+    },
+    {
+      "Pen Name": "Bic Cristal",
+      "Ink Color": "Red",
+      "Chemical Composition": "Oil-based ink (alkylphenols)",
+      "Identification Reaction": "Reacts with iodine, producing a faint brownish hue."
+    },
+    {
+      "Pen Name": "Staedtler Fineliner",
+      "Ink Color": "Green",
+      "Chemical Composition": "Water-based ink (dye-based)",
+      "Identification Reaction": "Paper chromatography shows separation of ink components."
+    },
+    {
+      "Pen Name": "Uni-ball Eye",
+      "Ink Color": "Blue-Black",
+      "Chemical Composition": "Pigment-based ink",
+      "Identification Reaction": "Reacts with bleach, turning faint yellowish."
+    },
+    {
+      "Pen Name": "Luxor Marker",
+      "Ink Color": "Purple",
+      "Chemical Composition": "Alcohol-based ink (xylene)",
+      "Identification Reaction": "Ink dissolves in ethanol; no residue remains."
+    },
+    {
+      "Pen Name": "Faber-Castell Highlighter",
+      "Ink Color": "Yellow",
+      "Chemical Composition": "Water-based fluorescent dye",
+      "Identification Reaction": "Fluorescence under UV light confirms the dye type."
+    },
+    {
+      "Pen Name": "Rotring Isograph",
+      "Ink Color": "Black",
+      "Chemical Composition": "Pigment-based ink (acrylic)",
+      "Identification Reaction": "Reacts with acetone; ink particles clump and settle."
+    },
+    {
+      "Pen Name": "Dollar Fountain Pen",
+      "Ink Color": "Blue",
+      "Chemical Composition": "Water-based ink (dye-based)",
+      "Identification Reaction": "Reacts with vinegar, causing a slight color change to greenish-blue."
+    },
+    {
+      "Pen Name": "Parker Pen",
+      "Ink Color": "Black",
+      "Chemical Composition": "Solvent-based ink (phenol compounds)",
+      "Identification Reaction": "Heat exposure darkens the ink, indicating solvent-based properties."
+    }
+  ]
+}
