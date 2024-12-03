@@ -1,6 +1,7 @@
 {
     "currencies": [
       { "denomination": "1000", "releaseDate": "2022", "serialNumber": "A12345" },
+      { "denomination": "10000", "releaseDate": "202222", "serialNumber": "A12345" },
       { "denomination": "2000", "releaseDate": "2015", "serialNumber": "A12445","type":"euro" },
       { "denomination": "500", "releaseDate": "2023", "serialNumber": "B67890" }
     ],

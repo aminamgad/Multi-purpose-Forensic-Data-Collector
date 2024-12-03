@@ -3,33 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dynamic Search</title>
-  <link rel="stylesheet" href="style.css">
+  <title>3D Animated Home Page</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="background-animation"></div>
+  
+  <header class="navbar">
+    <div class="logo">ForensicsTech</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="about.html" >About</a></li>
+        <li><a href="drug.html" >Drugs</a></li>
+        <li><a href="services.html" >Services</a></li>
+        <li><a href="contact.html" >Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="search-container">
-    <label for="category">Choose a Category: </label>
-    <select id="category" onchange="updateSearchInputs()">
-      <option value="currencies">Currencies</option>
-      <option value="rivets">Rivets</option>
-      <option value="rivetMaterial">Rivet Material</option>
-      <option value="Weapons"> Weapons</option>
-      <option value="pens">Pens</option>
-    </select>
-  </div>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Explore Forensic Innovations</h1>
+      <p>Pioneering forensic and chemical technologies for tomorrow.</p>
+      <a href="about.html" target="_blank" class="cta-button">Learn More</a>
+    </div>
+    <div class="hero-animation">
+      <div class="cube">
+        <div class="face front">F</div>
+        <div class="face back">B</div>
+        <div class="face left">L</div>
+        <div class="face right">R</div>
+        <div class="face top">T</div>
+        <div class="face bottom">B</div>
+      </div>
+    </div>
+  </section>
 
-  <div id="dynamic-inputs">
-    <!-- Dynamic input fields will be generated here -->
-  </div>
-
-  <button onclick="performSearch()">Search</button>
-
-  <div id="search-results" class="result-container">
-    <h3>Search Results</h3>
-    <div id="result-content"></div>
-  </div>
-
-<script src="script.js"></script>
+  <footer class="footer">
+    <p>© 2024 ForensicsTech. All rights reserved.</p>
+  </footer>
 </body>
 </html>
