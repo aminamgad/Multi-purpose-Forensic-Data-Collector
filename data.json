@@ -207,6 +207,7 @@
     },
     {
       "Weapon Name": "Benelli M4",
+      "img":"./public/WhatsApp Image 2024-12-03 at 9.08.34 PM.jpeg",
       "Serial Number": "SN98765",
       "Projectile Shape": "Rounded (Pellet)",
       "Number of Rounds": 8,
